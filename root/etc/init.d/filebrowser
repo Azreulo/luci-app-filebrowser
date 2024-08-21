@@ -30,7 +30,7 @@ start() {
 	export HOME="/root"
 	SSL_PARAMS=""
 	[ -n "$SSL_CERT" ] && [ -n "$SSL_KEY" ] && SSL_PARAMS="-t $SSL_CERT -k $SSL_KEY"
-	$executable_directory/filebrowser -a $ADDRESS -p $PORT -r $ROOT_PATH -d "$DATABASE" $SSL_PARAMS -l $LOG_PATH >/dev/null 2>&1 &
+	$executable_directory/filebrowser -a $ADDRESS -p $PORT -r $ROOT_PATH -d "$DATABASE" $SSL_PARAMS -l $LOG_PATH --noauth >/dev/null 2>&1 &
 }
 
 stop() {
